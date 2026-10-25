@@ -1,0 +1,188 @@
+:root{
+  --bg:#090909; --bg2:#0b0b0b; --panel:#111210; --line:#232623;
+  --text:#f4f4f2; --muted:#9a9d98;
+  --green:#46d65a; --green-d:#2fb845; --mint:#3fbf8a; --lime:#7dff8a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",Arial,sans-serif;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+h1,h2,h3,p{margin:0}
+::selection{background:var(--green);color:#090909}
+.g{color:var(--green)}
+.shell{width:min(883px,calc(100% - 48px));margin-inline:auto}
+.skip-link{position:fixed;left:-999px;top:8px;background:#fff;color:#000;padding:12px;z-index:100}
+.skip-link:focus{left:8px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;font-weight:600;font-size:12px;border-radius:2px;transition:.15s}
+.btn-green{background:var(--green);color:#071007}
+.btn-green:hover{background:var(--lime)}
+.btn-ghost{color:var(--text)}
+.btn-ghost:hover{color:var(--green)}
+.btn-dark{background:#0a0a0a;color:var(--green)}
+.btn-dark:hover{background:#000}
+.btn-sm{padding:10px 14px}
+
+.site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;height:52px;padding:0 64px;background:rgba(11,11,11,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:8px}
+.brand-pill{width:26px;height:26px}
+.brand-ticker{font-weight:700;font-size:18px;letter-spacing:-.3px}
+.brand-sub{font-size:7px;letter-spacing:.14em;color:var(--muted);line-height:1.25;margin-left:6px}
+.site-header nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:40px;font-size:11px}
+.site-header nav a:hover{color:var(--green)}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:586px;padding:0 100px;gap:20px;overflow:hidden}
+.hero h1{font-size:clamp(44px,5.4vw,64px);line-height:1.02;letter-spacing:-.035em;font-weight:600}
+.hero-copy p{margin-top:36px;font-size:11px;line-height:1.75;color:#cfd2cd}
+.hero-actions{display:flex;align-items:center;gap:22px;margin-top:28px}
+.hero-art{position:relative;display:flex;justify-content:center;align-items:center;height:100%}
+.hero-glow{position:absolute;width:min(520px,95%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(70,214,90,.30) 0%,rgba(70,214,90,.10) 45%,transparent 70%)}
+.hero-art .cutout{position:relative;width:auto;height:min(540px,88%);max-width:100%;object-fit:contain}
+
+.contract-strip{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 100px;height:49px;background:#12150f;border-block:1px solid #1d2419}
+.contract-label{display:flex;align-items:center;gap:12px;font-size:7px;letter-spacing:.12em}
+.contract-label b{color:var(--green)}
+.contract-label i{width:1px;height:9px;background:#3a4136}
+.contract-label span{color:var(--muted)}
+.contract-strip code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9px;color:#e8ebe6;overflow:hidden;text-overflow:ellipsis}
+.copy{display:flex;align-items:center;gap:6px;color:var(--green);font-size:8px;white-space:nowrap}
+
+.story{padding:64px 0 56px}
+.story-head{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:start}
+.story-head h2{font-size:clamp(30px,3.6vw,40px);line-height:1.12;letter-spacing:-.03em;font-weight:500}
+.story-text{display:grid;gap:14px;font-size:9.5px;line-height:1.6;color:#b9bcb7;padding-top:4px}
+
+.banner{position:relative;margin-top:36px;aspect-ratio:2.5/1;overflow:hidden;background:#06130a;isolation:isolate}
+.banner-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.banner-bar{position:absolute;inset:auto 0 0 0;height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:var(--green);color:#071007;font-weight:600;font-size:18px;letter-spacing:-.02em}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);margin-top:24px;border-top:1px solid var(--line)}
+.steps article{padding:22px 24px 0 0;border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:142px}
+.steps article+article{padding-left:20px}
+.steps article:last-child{border-right:0}
+.steps small{font-size:6px;color:var(--green)}
+.steps h3{margin-top:22px;font-size:15px;font-weight:500}
+.steps p{margin-top:8px;font-size:7.5px;line-height:1.6;color:var(--muted);max-width:170px}
+.steps footer{margin-top:auto;padding:16px 0 0;display:flex;gap:10px;font-size:5.5px;letter-spacing:.1em;color:#6f736d}
+.steps footer b{color:var(--green);font-size:7px}
+
+
+.community{background:var(--green);color:#071007}
+.community-inner{width:min(883px,calc(100% - 48px));margin-inline:auto;display:grid;grid-template-columns:1fr 1.25fr;align-items:center;min-height:308px;gap:40px}
+.community-art{display:flex;justify-content:center;align-self:end;overflow:hidden;height:308px}
+.community-art .cutout{width:100%;max-width:none;height:auto;align-self:flex-start;margin-top:10px}
+.community-copy h2{font-size:clamp(34px,4vw,44px);line-height:1.05;letter-spacing:-.035em;font-weight:600}
+.community-copy p{margin-top:22px;font-size:8.5px;line-height:1.6;max-width:360px;color:#10260f}
+.community-copy .btn{margin-top:18px}
+.ulink{display:table;margin-top:18px;font-size:7px;border-bottom:1px solid #071007;padding-bottom:2px}
+
+.faq{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;padding:80px 0 64px;align-items:start}
+.faq h2{font-size:22px;font-weight:400;letter-spacing:-.02em;color:#dedfdb;line-height:1.3;padding-top:14px}
+.faq-list{border-top:1px solid #272a26}
+details{border-bottom:1px solid #272a26;padding:14px 0}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:8.5px;font-weight:500;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--green);font-size:15px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:12px;font-size:8px;line-height:1.65;color:#b9bcb7;max-width:420px}
+
+.site-footer{border-top:1px solid var(--line);padding:22px 0 20px}
+.foot-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:24px;border-bottom:1px solid #1c1f1b}
+.foot-brand{display:flex;align-items:center;gap:8px}
+.foot-brand b{font-size:15px;font-weight:700}
+.foot-brand div{margin-left:10px;display:grid;font-size:6.5px;line-height:1.5}
+.foot-brand span{color:var(--green)}
+.foot-links{display:flex;gap:20px;font-size:6.5px;color:var(--green)}
+.foot-bottom{display:grid;grid-template-columns:1fr 2fr auto;gap:20px;align-items:start;padding-top:12px;font-size:5.5px;color:#7a7e78}
+.foot-bottom p{max-width:370px;line-height:1.6}
+
+/* desktop scale: all sizes x1.5 (real values, no zoom) */
+@media (min-width:901px){
+  html{scroll-padding-top:135px}
+  body{font-size:22.5px}
+  .shell{width:min(1324.5px,calc(100% - 72px))}
+  .skip-link{left:-1498.5px;top:12px;padding:18px}
+  .skip-link:focus{left:12px}
+  .btn{gap:15px;padding:18px 27px;font-size:18px;border-radius:3px}
+  .btn-sm{padding:15px 21px}
+  .site-header{height:78px;padding:0 96px;backdrop-filter:blur(12px)}
+  .brand{gap:12px}
+  .brand-pill{width:39px;height:39px}
+  .brand-ticker{font-size:27px}
+  .brand-sub{font-size:13px;margin-left:9px}
+  .site-header nav{gap:60px;font-size:17px}
+  .hero{min-height:700px;padding:0 150px;gap:30px}
+  .hero h1{font-size:clamp(66px,5.4vw,96px)}
+  .hero-copy p{margin-top:54px;font-size:17px}
+  .hero-actions{gap:33px;margin-top:42px}
+  .hero-glow{width:min(780px,95%)}
+  .hero-art .cutout{height:min(640px,92%)}
+  .contract-strip{gap:30px;padding:0 150px;height:73.5px}
+  .contract-label{gap:18px;font-size:13px}
+  .contract-label i{height:13.5px}
+  .contract-strip code{font-size:16px}
+  .copy{gap:9px;font-size:15px}
+  .story{padding:96px 0 84px}
+  .story-head{gap:84px}
+  .story-head h2{font-size:clamp(45px,3.6vw,60px)}
+  .story-text{gap:21px;font-size:16px;padding-top:6px}
+  .banner{margin-top:54px}
+  .banner-bar{height:75px;padding:0 21px;font-size:27px}
+  .steps{margin-top:36px}
+  .steps article{padding:33px 36px 0 0;min-height:213px}
+  .steps article+article{padding-left:30px}
+  .steps small{font-size:12px}
+  .steps h3{margin-top:33px;font-size:22.5px}
+  .steps p{margin-top:12px;font-size:13px;max-width:255px}
+  .steps footer{padding:24px 0 0;gap:15px;font-size:12px}
+  .steps footer b{font-size:13px}
+  .community-inner{width:min(1324.5px,calc(100% - 72px));min-height:462px;gap:60px}
+  .community-art{height:462px}
+  .community-art .cutout{margin-top:15px}
+  .community-copy h2{font-size:clamp(51px,4vw,66px)}
+  .community-copy p{margin-top:33px;font-size:15px;max-width:540px}
+  .community-copy .btn{margin-top:27px}
+  .ulink{margin-top:27px;font-size:13px;padding-bottom:3px}
+  .faq{gap:84px;padding:120px 0 96px}
+  .faq h2{font-size:33px;padding-top:21px}
+  details{padding:21px 0}
+  summary{font-size:15px}
+  summary::after{font-size:22.5px}
+  details p{margin-top:18px;font-size:15px;max-width:630px}
+  .site-footer{padding:33px 0 30px}
+  .foot-top{padding-bottom:36px}
+  .foot-brand{gap:12px}
+  .foot-brand b{font-size:22.5px}
+  .foot-brand div{margin-left:15px;font-size:12px}
+  .foot-links{gap:30px;font-size:12px}
+  .foot-bottom{gap:30px;padding-top:18px;font-size:12px}
+  .foot-bottom p{max-width:555px}
+}
+@media (min-width:901px) and (max-width:1199px){
+  .hero{padding:0 48px}
+  .hero h1{font-size:54px}
+  .contract-strip{padding:0 48px}
+}
+
+/* readable sizes on small screens and a sane layout */
+@media (max-width:900px){
+  .site-header{padding:0 20px}
+  .site-header nav{display:none}
+  .hero{grid-template-columns:1fr;padding:48px 24px 0;min-height:0;text-align:left}
+  .hero-art{min-height:420px}
+  .contract-strip{padding:0 20px}
+  .story-head,.faq,.community-inner{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .steps article,.steps article+article{padding:22px 0;border-right:0;border-bottom:1px solid var(--line)}
+    .banner{aspect-ratio:auto;height:300px}
+  .banner-bar{font-size:13px}
+  .foot-bottom{grid-template-columns:1fr}
+  .foot-top{flex-direction:column;gap:18px;align-items:flex-start}
+  .story-text,.hero-copy p,  summary{font-size:14px}
+  .steps h3{font-size:18px}
+  .steps footer{font-size:9px}.steps footer b{font-size:11px}
+  .contract-strip code{font-size:10px}
+  .contract-label,.copy,.ulink,.foot-links,.foot-brand div,.foot-bottom{font-size:11px}
+  }
