@@ -1,7 +1,7 @@
 /* $PUMP · Pretty Unreal Massive Pair · v2 scroll site */
 // ---- CONFIG: fill these in ----
 const CONFIG = {
-  ca: '',                                   // Solana mint. TBA. (legacy placeholder "xxpump" counts as unset)
+  ca: 'BhPGFJfTWhmVRUFp7HJXwTMecMGJsKR6hpCxhd4Fpump',                                   // Solana mint. TBA. (legacy placeholder "xxpump" counts as unset)
   x: 'https://x.com/PUMPMassivePair',
   tg: '',                                   // Telegram invite. TBA.
 };
@@ -10,7 +10,7 @@ const CONFIG = {
 const isMint = (s) => /^[1-9A-HJ-NP-Za-km-z]{32,44}$/.test(s || '');
 const hasCA = isMint(CONFIG.ca);
 const LINKS = {
-  buy: hasCA ? 'https://pump.fun/coin/' + CONFIG.ca : '',
+  buy: hasCA ? 'https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=' + CONFIG.ca : '',
   chart: hasCA ? 'https://dexscreener.com/solana/' + CONFIG.ca : '',
   solscan: hasCA ? 'https://solscan.io/token/' + CONFIG.ca : '',
   x: CONFIG.x,
