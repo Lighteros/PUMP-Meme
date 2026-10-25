@@ -2,14 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>$PUMP | Pretty Unreal Massive Pair</title>
-<meta name="description" content="Pretty Unreal Massive Pair. Hold $PUMP. Receive BTC from trading fees.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="images/favicon.png" type="image/png">
+<meta name="description" content="Pretty Unreal Massive Pair. Hold $PUMP. Receive BTC from trading fees. A Solana community token.">
+<meta name="theme-color" content="#090909">
+<link rel="canonical" href="https://prettyunrealmassivepair.lol/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prettyunrealmassivepair.lol/">
+<meta property="og:title" content="$PUMP | Pretty Unreal Massive Pair">
+<meta property="og:description" content="Hold the pair. Stack $PUMP. Receive BTC from trading fees.">
+<meta property="og:image" content="https://prettyunrealmassivepair.lol/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The $PUMP pill girl with the $PUMP title">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@PUMPMassivePair">
+<meta name="twitter:title" content="$PUMP | Pretty Unreal Massive Pair">
+<meta name="twitter:description" content="Hold the pair. Stack $PUMP. Receive BTC from trading fees.">
+<meta name="twitter:image" content="https://prettyunrealmassivepair.lol/og.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/bebas.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dmsans-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/images/hero-cutout.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="/js/vendor/lenis.css">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -21,76 +40,124 @@
       <line x1="60" y1="34" x2="60" y2="86" stroke="#111" stroke-width="7"/>
     </g>
   </symbol>
+  <symbol id="copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
+  <symbol id="xlogo" viewBox="0 0 24 24"><path fill="currentColor" d="M17.8 2.5h3.3l-7.2 8.2 8.5 10.8h-6.6l-5.2-6.7-5.9 6.7H1.4l7.7-8.8L1 2.5h6.8l4.7 6.1zm-1.2 17h1.8L7.1 4.4H5.1z"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 </svg>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
 
-<header class="site-header">
-  <a class="brand" href="#">
+<header class="site-header" id="header">
+  <a class="brand" href="#top" data-scroll aria-label="Pretty Unreal Massive Pair, back to top">
     <svg class="brand-pill"><use href="#pill"/></svg>
     <span class="brand-ticker">$PUMP</span>
     <span class="brand-sub">PRETTY UNREAL<br>MASSIVE PAIR</span>
   </a>
-  <nav>
-    <a href="#story">How it pays</a>
-    <a href="#community">Community</a>
+  <nav aria-label="Sections">
+    <a href="#story" data-scroll>How it pays</a>
+    <a href="#pair" data-scroll>The pair</a>
+    <a href="#gallery" data-scroll>Gallery</a>
+    <a href="#community" data-scroll>Community</a>
+    <a href="#faq" data-scroll>FAQ</a>
   </nav>
-  <a class="btn btn-green btn-sm" href="PUMP_LINK" data-pump>Get $PUMP</a>
+  <a class="btn btn-green btn-sm" data-link="buy">Get $PUMP</a>
 </header>
 
+<nav class="rail" id="rail" aria-label="Chapters">
+  <a href="#top" data-scroll><i></i><span>Start</span></a>
+  <a href="#story" data-scroll><i></i><span>How it pays</span></a>
+  <a href="#pair" data-scroll><i></i><span>The pair</span></a>
+  <a href="#gallery" data-scroll><i></i><span>Gallery</span></a>
+  <a href="#buy" data-scroll><i></i><span>Get $PUMP</span></a>
+  <a href="#community" data-scroll><i></i><span>Community</span></a>
+  <a href="#faq" data-scroll><i></i><span>FAQ</span></a>
+</nav>
+
 <main id="main">
-  <section class="hero">
+  <!-- 1 · HERO: pinned, layered parallax -->
+  <section class="hero" id="top">
+    <div class="hero-stage">
+      <picture class="layer hero-bg">
+        <source media="(max-width:760px)" srcset="/images/hero-bg-m.webp">
+        <img src="/images/hero-bg.webp" alt="" width="1920" height="1080" fetchpriority="high">
+      </picture>
+      <div class="layer hero-tint"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-word" aria-hidden="true">PUMP</div>
+      <picture class="layer hero-btc" aria-hidden="true">
+        <source media="(max-width:760px)" srcset="/images/layer-btc-m.webp">
+        <img src="/images/layer-btc.webp" alt="" width="2000" height="800">
+      </picture>
+      <picture class="layer hero-cutout">
+        <source media="(max-width:760px)" srcset="/images/hero-cutout-m.webp">
+        <img src="/images/hero-cutout.webp" alt="The $PUMP mascot: green-haired girl in a white pill crop top and black bomber jacket, jumping" width="1000" height="1057" fetchpriority="high">
+      </picture>
+      <picture class="layer hero-pills" aria-hidden="true">
+        <source media="(max-width:760px)" srcset="/images/layer-pills-fg-m.webp">
+        <img src="/images/layer-pills-fg.webp" alt="" width="1920" height="1080">
+      </picture>
+    </div>
     <div class="hero-copy">
-      <h1>Hold the pair.<br><span class="g">Stack $PUMP.</span></h1>
-      <p>Pretty. Unreal. Massive. Pair.<br>Hold $PUMP. Receive BTC from trading fees.<br>Paid on Solana. Tracked on-chain.</p>
+      <p class="kicker"><svg class="ico"><use href="#pill"/></svg> Solana · $PUMP / BTC</p>
+      <h1><span class="ln">Hold the pair.</span><span class="ln g">Stack $PUMP.</span></h1>
+      <p class="hero-lede">Pretty. Unreal. Massive. Pair. Hold $PUMP and receive BTC from trading fees. Paid on Solana, tracked on-chain.</p>
       <div class="hero-actions">
-        <a class="btn btn-green" href="#story">How it pays</a>
-        <a class="btn btn-ghost" href="PUMP_LINK" data-pump>Get $PUMP</a>
+        <a class="btn btn-green" data-link="buy">Get $PUMP</a>
+        <a class="btn btn-ghost" data-link="x"><svg class="ico"><use href="#xlogo"/></svg>@PUMPMassivePair</a>
       </div>
     </div>
-    <div class="hero-art">
-      <div class="hero-glow"></div>
-      <img class="cutout" src="images/hero.webp" alt="$PUMP mascot jumping" width="1000" height="1057">
-    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
   </section>
 
-  <div class="contract-strip">
+  <!-- 2 · CONTRACT STRIP -->
+  <div class="contract-strip" id="ca-strip">
     <div class="contract-label"><b>THE ONLY $PUMP CA</b><i></i><span>SOLANA</span></div>
-    <code id="ca">xxpump</code>
-    <button class="copy" id="copy" type="button">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-      <span>Copy CA</span>
-    </button>
+    <code class="js-ca">TBA · announced on X</code>
+    <button class="copy js-copy" type="button" disabled><svg width="14" height="14"><use href="#copy"/></svg><span>Copy CA</span></button>
   </div>
 
-  <section id="story" class="story shell">
+  <!-- 2b · TICKER RIBBON -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-row r1"><span>PRETTY</span><b>●</b><span>UNREAL</span><b>●</b><span>MASSIVE</span><b>●</b><span>PAIR</span><b>●</b><span>PRETTY</span><b>●</b><span>UNREAL</span><b>●</b><span>MASSIVE</span><b>●</b><span>PAIR</span><b>●</b><span>PRETTY</span><b>●</b><span>UNREAL</span><b>●</b><span>MASSIVE</span><b>●</b><span>PAIR</span><b>●</b></div>
+    <div class="ribbon-row r2"><span>$PUMP / BTC</span><b>✚</b><span>HOLD</span><b>✚</b><span>STACK</span><b>✚</b><span>RECEIVE BTC</span><b>✚</b><span>$PUMP / BTC</span><b>✚</b><span>HOLD</span><b>✚</b><span>STACK</span><b>✚</b><span>RECEIVE BTC</span><b>✚</b><span>$PUMP / BTC</span><b>✚</b><span>HOLD</span><b>✚</b></div>
+  </div>
+
+  <!-- 3 · STORY + BANNER + STEPS -->
+  <section class="story shell" id="story">
     <div class="story-head">
-      <h2>Pretty Unreal Massive Pair.<br>BTC in return.</h2>
-      <div class="story-text">
+      <h2 class="reveal-words">Pretty Unreal Massive Pair.<br><span class="g">BTC in return.</span></h2>
+      <div class="story-text reveal-stagger">
         <p>Meet Pretty Unreal Massive Pair. A Solana community with a simple idea: pair $PUMP with BTC, and put part of the trading fees back in the hands of the holders.</p>
         <p>Your $PUMP stays in your wallet. Eligible distributions arrive separately as BTC, funded by a portion of trading fees.</p>
       </div>
     </div>
 
-    <div class="banner">
-      <img class="banner-img" src="images/banner.jpg" alt="$PUMP mascot with the PUMP pill emblem" width="1983" height="793">
-      <div class="banner-bar"><span>MASSIVE ENERGY.</span><span>BTC REWARDS.</span></div>
+    <div class="banner" id="banner">
+      <picture>
+        <source media="(max-width:760px)" srcset="/images/story-banner-m.webp">
+        <img class="banner-img" src="/images/story-banner.webp" alt="The $PUMP girl next to a glowing pill emblem with a BTC coin and a rising green chart" width="2000" height="800" loading="lazy">
+      </picture>
+      <div class="banner-bar" aria-hidden="true"><div class="marquee" id="marquee"><span>MASSIVE ENERGY.</span><span>BTC REWARDS.</span><span>HOLD THE PAIR.</span><span>STACK $PUMP.</span><span>MASSIVE ENERGY.</span><span>BTC REWARDS.</span><span>HOLD THE PAIR.</span><span>STACK $PUMP.</span></div></div>
     </div>
 
-    <div class="steps">
+    <div class="steps" id="steps">
       <article>
+        <figure><img src="/images/step-01.webp" alt="The $PUMP girl hugging a giant pill" width="1100" height="825" loading="lazy"></figure>
         <small>01</small>
         <h3>Hold $PUMP.</h3>
-        <p>Your community token, in your Solana wallet. No staking or wallet connection on this site.</p>
+        <p>Your community token, in your Solana wallet. No staking and no wallet connection on this site.</p>
         <footer><span>THE TOKEN</span><b>$PUMP</b></footer>
       </article>
       <article>
+        <figure><img src="/images/step-02.webp" alt="The $PUMP girl pointing at a chart while fees pour into a pile of BTC" width="1100" height="825" loading="lazy"></figure>
         <small>02</small>
         <h3>Trading creates fees.</h3>
         <p>The $PUMP / BTC market generates fees. A portion goes toward holder rewards.</p>
         <footer><span>THE PAIR</span><b>$PUMP / BTC</b></footer>
       </article>
       <article>
+        <figure><img src="/images/step-03.webp" alt="The $PUMP girl holding a phone as BTC coins fly around her" width="1100" height="825" loading="lazy"></figure>
         <small>03</small>
         <h3>Receive BTC.</h3>
         <p>BTC rewards land in your wallet on Solana. Every payout can be traced.</p>
@@ -99,38 +166,124 @@
     </div>
   </section>
 
-
-  <section id="community" class="community">
-    <div class="community-inner">
-      <div class="community-art"><img class="cutout" src="images/community.webp" alt="" width="1000" height="1000" loading="lazy"></div>
-      <div class="community-copy">
-        <h2>The green side<br>of your timeline.</h2>
-        <p>Memes, distribution updates, and the holders behind $PUMP. Join the conversation where Pretty Unreal Massive Pair happens.</p>
-        <a class="btn btn-dark" href="X_LINK" data-x>Join $PUMP on X</a>
-        <a class="ulink" href="PUMP_LINK" data-pump>View the $PUMP / BTC pair on Pump</a>
+  <!-- 4 · THE PAIR: pinned beat, pill splits and the acronym builds -->
+  <section class="pair" id="pair">
+    <div class="pair-pin">
+      <div class="pair-grid shell">
+        <div class="pair-copy">
+          <p class="kicker">Scroll to open the pill</p>
+          <ul class="acro" id="acro">
+            <li><b>P</b><span>retty</span></li>
+            <li><b>U</b><span>nreal</span></li>
+            <li><b>M</b><span>assive</span></li>
+            <li><b>P</b><span>air</span></li>
+          </ul>
+          <p class="pair-note" id="pairNote">One pill. Two halves. $PUMP on one side, BTC on the other.</p>
+        </div>
+        <div class="pill-stage" aria-hidden="true">
+          <div class="pill-glow"></div>
+          <div class="pill-core">
+            <div class="coin">₿</div>
+          </div>
+          <div class="pill-half left"><span>$PUMP</span></div>
+          <div class="pill-half right"><span>BTC</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="faq shell">
-    <h2>Know your token.<br>Know your rewards.</h2>
-    <div class="faq-list">
-      <details open>
-        <summary>What exactly am I holding?</summary>
-        <p>You hold $PUMP ("Pretty Unreal Massive Pair"), a community token on Solana. Always verify the full contract address before trading.</p>
-      </details>
-      <details>
-        <summary>How does holding turn into BTC?</summary>
-        <p>Trading on the $PUMP / BTC pair creates fees. A portion of those fees is distributed to eligible holders as BTC, sent straight to their wallets.</p>
-      </details>
-      <details>
-        <summary>Are rewards guaranteed?</summary>
-        <p>No. Rewards depend on trading activity and are variable. Nothing here is a promise of returns.</p>
-      </details>
-      <details>
-        <summary>Do I need to connect my wallet or claim here?</summary>
-        <p>No. This site never asks you to connect a wallet, sign anything or claim anything. Payouts arrive on their own.</p>
-      </details>
+  <!-- 5 · GALLERY: horizontal scroll -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-pin">
+      <div class="gallery-head shell">
+        <h2>The green side<br>of your <span class="g">timeline.</span></h2>
+        <p>Fresh $PUMP art. Save it, post it, tag @PUMPMassivePair.</p>
+      </div>
+      <div class="track" id="track">
+        <figure class="card"><img src="/images/gallery-01.webp" alt="Close-up of the $PUMP girl winking" width="900" height="900" loading="lazy"><figcaption>01 · Wink</figcaption></figure>
+        <figure class="card"><img src="/images/gallery-02.webp" alt="The $PUMP girl sitting on a giant BTC coin" width="900" height="900" loading="lazy"><figcaption>02 · Sitting pretty</figcaption></figure>
+        <figure class="card"><img src="/images/gallery-03.webp" alt="The $PUMP girl riding a pill rocket" width="900" height="900" loading="lazy"><figcaption>03 · Pill rocket</figcaption></figure>
+        <figure class="card"><img src="/images/gallery-04.webp" alt="The $PUMP girl in front of a rising green chart" width="900" height="900" loading="lazy"><figcaption>04 · Green candles</figcaption></figure>
+        <figure class="card"><img src="/images/gallery-05.webp" alt="The $PUMP girl with sunglasses and a bag of BTC" width="900" height="900" loading="lazy"><figcaption>05 · The bag</figcaption></figure>
+        <figure class="card"><img src="/images/gallery-06.webp" alt="Chibi $PUMP girl jumping" width="900" height="900" loading="lazy"><figcaption>06 · Chibi</figcaption></figure>
+        <figure class="card"><img src="/images/gallery-07.webp" alt="The $PUMP girl on a rooftop over a green city" width="900" height="900" loading="lazy"><figcaption>07 · Night shift</figcaption></figure>
+        <figure class="card"><img src="/images/gallery-08.webp" alt="The $PUMP girl making a heart with her hands" width="900" height="900" loading="lazy"><figcaption>08 · Love the pair</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · BUY -->
+  <section class="buy" id="buy">
+    <picture class="buy-bg">
+      <source media="(max-width:760px)" srcset="/images/buy-scene-m.webp">
+      <img src="/images/buy-scene.webp" alt="" width="1920" height="1080" loading="lazy">
+    </picture>
+    <div class="buy-inner shell">
+      <h2 class="reveal-words">Get <span class="g">$PUMP.</span></h2>
+      <ol class="buy-steps reveal-stagger">
+        <li><b>1</b><div><h3>Get a Solana wallet</h3><p>Phantom or Solflare, from the official site. Keep your seed phrase offline.</p></div></li>
+        <li><b>2</b><div><h3>Add SOL</h3><p>Buy SOL on an exchange and send it to your wallet. Keep a little extra for fees.</p></div></li>
+        <li><b>3</b><div><h3>Swap for $PUMP</h3><p>Use the official CA from this site only. It will be posted here and on @PUMPMassivePair at launch.</p></div></li>
+      </ol>
+      <div class="buy-actions">
+        <a class="btn btn-green" data-link="buy">Buy $PUMP</a>
+        <a class="btn btn-line" data-link="chart">Chart</a>
+        <a class="btn btn-line" data-link="x"><svg class="ico"><use href="#xlogo"/></svg>Follow on X</a>
+      </div>
+      <p class="buy-status" id="buyStatus">Contract address: TBA. Links go live the moment it is announced.</p>
+    </div>
+  </section>
+
+  <!-- 7 · COMMUNITY -->
+  <section class="community" id="community">
+    <div class="community-inner shell">
+      <div class="community-art">
+        <picture>
+          <source media="(max-width:760px)" srcset="/images/community-cutout-m.webp">
+          <img class="cutout" src="/images/community-cutout.webp" alt="The $PUMP girl waving" width="1024" height="1024" loading="lazy">
+        </picture>
+      </div>
+      <div class="community-copy">
+        <h2>Join the<br>massive pair.</h2>
+        <p>Memes, distribution updates, and the holders behind $PUMP. Join the conversation where Pretty Unreal Massive Pair happens.</p>
+        <div class="community-actions">
+          <a class="btn btn-dark" data-link="x"><svg class="ico"><use href="#xlogo"/></svg>Join $PUMP on X</a>
+          <a class="btn btn-dark" data-link="tg">Telegram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · FAQ -->
+  <section class="faq" id="faq">
+    <picture class="faq-bg" aria-hidden="true">
+      <source media="(max-width:760px)" srcset="/images/faq-bg-m.webp">
+      <img src="/images/faq-bg.webp" alt="" width="1920" height="1080" loading="lazy">
+    </picture>
+    <div class="shell faq-inner">
+      <h2 class="reveal-words">Know your token.<br><span class="g">Know your rewards.</span></h2>
+      <div class="faq-list">
+        <details open>
+          <summary>What exactly am I holding?</summary>
+          <p>You hold $PUMP ("Pretty Unreal Massive Pair"), a community token on Solana. Always verify the full contract address before trading.</p>
+        </details>
+        <details>
+          <summary>How does holding turn into BTC?</summary>
+          <p>Trading on the $PUMP / BTC pair creates fees. A portion of those fees is distributed to eligible holders as BTC, sent straight to their wallets.</p>
+        </details>
+        <details>
+          <summary>Are rewards guaranteed?</summary>
+          <p>No. Rewards depend on trading activity and are variable. Nothing here is a promise of returns.</p>
+        </details>
+        <details>
+          <summary>Do I need to connect my wallet or claim here?</summary>
+          <p>No. This site never asks you to connect a wallet, sign anything or claim anything. Payouts arrive on their own.</p>
+        </details>
+        <details>
+          <summary>Where is the contract address?</summary>
+          <p>It hasn't been published yet. When it is, it will appear in the strip at the top of this page and on @PUMPMassivePair. Ignore any other address.</p>
+        </details>
+      </div>
     </div>
   </section>
 </main>
@@ -143,18 +296,23 @@
       <div><strong>Pretty Unreal Massive Pair.</strong><span>Hold the pair. Stack $PUMP.</span></div>
     </div>
     <div class="foot-links">
-      <a href="X_LINK" data-x>X Community</a>
-      <a href="PUMP_LINK" data-pump>Pump</a>
-      <a href="SOLSCAN_LINK" data-solscan>Solscan</a>
+      <a data-link="x">X</a>
+      <a data-link="tg">Telegram</a>
+      <a data-link="buy">Pump</a>
+      <a data-link="chart">Chart</a>
+      <a data-link="solscan">Solscan</a>
     </div>
   </div>
   <div class="shell foot-bottom">
     <span>&copy; 2026 PRETTY UNREAL MASSIVE PAIR</span>
     <p>$PUMP is a Solana community token. Rewards are variable and not guaranteed. Crypto assets involve risk.</p>
-    <a href="#">Back to top</a>
+    <a href="#top" data-scroll>Back to top</a>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="/js/vendor/lenis.min.js" defer></script>
+<script src="/js/vendor/gsap.min.js" defer></script>
+<script src="/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/js/main.js" defer></script>
 </body>
 </html>
